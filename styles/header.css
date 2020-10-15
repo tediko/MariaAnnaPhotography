@@ -1,4 +1,37 @@
 /* Header section */
+.header__container {
+    padding: 25px 25px 0 25px;
+}
 .header__wrapper {
+    position: relative;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 181px 40px 230px 40px;
+    background: url('../assets/img/header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.header__logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.0625rem;
+    color: var(--clr-white);
+    max-width: 160px;
+    margin-bottom: 40px;
+}
+
+.header__text {
+    max-width: 460px;
+}
+
+.header__arrow {
+    position: absolute;
+    background: url('../assets/img/header-arrow.png');
+    background-repeat: no-repeat;
+    bottom: 70px;
+    width: 40px;
+    height: 40px;
+    transform: scale(0.5);
 }
