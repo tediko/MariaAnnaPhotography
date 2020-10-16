@@ -49,6 +49,11 @@ h1 {
 h2 {
     font-size: 1.5625rem;
     color: var(--clr-gray-dark);
+    text-transform: uppercase;
+}
+
+.h-lc {
+    text-transform: lowercase;
 }
 
 /* Heading media queries */
