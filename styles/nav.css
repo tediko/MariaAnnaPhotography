@@ -50,29 +50,54 @@
     transform: translateY(-10px);
 }
 
-.nav__hamburger {
-    display: flex;
-    flex-direction: column;
+/* Hamburger menu button*/
+.nav__mobile-btn { /* button container */
+    position: relative;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
 }
 
-.nav__hamburger-line:not(:last-child) {
-    margin-bottom: 5px;
+.nav__hamburger { /* middle hamburger line */
+    width: 30px;
+    height: 3px;
+    background: black;
+    border-radius: 5px;
+    transition: transform 0.5s ease-in-out,
+                background 0.5s ease-in-out;
 }
 
-.nav__hamburger-line:first-child {
-    transform: rotate(45deg);
+.nav__hamburger::before, /* first and last hamburger line */
+.nav__hamburger::after {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 3px;
+    background: black;
+    border-radius: 5px;
+    transition: transform 0.5s ease-in-out;
 }
 
-.nav__hamburger-line:nth-child(2) {
-    opacity: 0;
+.nav__hamburger::before {
+    transform: translateY(-10px);
 }
 
-.nav__hamburger-line:last-child {
-    transform: rotate(-45deg);
+.nav__hamburger::after {
+    transform: translateY(10px);
 }
 
-.nav__hamburger-line {
-    width: 25px;
-    height: 2px;
-    background: var(--clr-gray-dark);
+.nav__mobile-btn.open .nav__hamburger { /* Hide middle hamburger line */
+    transform: translateX(-50px);
+    background: transparent;
+}
+
+.nav__mobile-btn.open .nav__hamburger::before { /* Rotate first hamburger line */
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.nav__mobile-btn.open .nav__hamburger::after { /* Rotate last hamburger line */
+    transform: rotate(-45deg) translate(35px, 35px);
 }
