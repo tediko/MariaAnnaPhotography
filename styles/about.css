@@ -1,4 +1,8 @@
 /* About section */
+.about__container {
+    padding: 0 25px;
+}
+
 .about__wrapper {
     padding: 130px 0 0 0;
     display: flex;
