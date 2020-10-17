@@ -6,34 +6,49 @@
     padding: 130px 0 0 0;
 }
 
-.works__top {
-    display: flex;
+.works__gallery {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(10, 5vw); /* rows is tied to the viewport width, so that the cells maintain its aspect ratio perfectly fine. */
+    gap: 25px;
 }
 
-.works__left {
-    flex: 2;
-}
-
-.works__row {
-    display: flex;
-}
-
-.work__box {
-    flex: 1;
-}
-
-.work__box--square {
-    width: 100%;
-    max-width: 370px;
-}
-
-.works__image {
+.works__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.works__right {
-    flex: 1;
+.works__item--1 {
+   /*  grid-column-start: 1; // this is enlargement of grid-column and grid-row
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 4; */
+    grid-column: 1 / span 6;
+    grid-row: 1 / span 3;
 }
 
+.works__item--2 {
+    grid-column: 7 / span 3;
+    grid-row: 1 / span 6;
+}
+
+.works__item--3 {
+    grid-column: 1 / span 3;
+    grid-row: 4 / span 3;
+}
+
+.works__item--4 {
+    grid-column: 4 / span 3;
+    grid-row: 4 / span 3;
+}
+
+.works__item--5 {
+    grid-column: 1 / span 6;
+    grid-row: 7 / span 3;
+}
+
+.works__item--6 {
+    grid-column: 7 / span 3;
+    grid-row: 7 / span 3;
+}
