@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 130px 0 0 0;
+    padding: 130px 25px 0 25px;
 }
 
 .works__gallery {
@@ -134,3 +134,21 @@
     border-color:transparent #fff #fff transparent;
 }
 
+/* Works media queries */
+
+@media (max-width: 768px) {
+    .works__gallery {
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(186px, 1fr));
+    }
+
+    .works__item--1,
+    .works__item--2,
+    .works__item--3,
+    .works__item--4,
+    .works__item--5,
+    .works__item--6 {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
