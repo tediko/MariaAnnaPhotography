@@ -52,6 +52,10 @@ h2 {
     text-transform: uppercase;
 }
 
+.h-white {
+    color: var(--clr-white);
+}
+
 .h-lc {
     text-transform: lowercase;
 }
