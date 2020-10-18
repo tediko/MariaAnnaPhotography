@@ -5,13 +5,36 @@
 }
 
 .testimonial__wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 130px 25px 0 25px;
 }
 
+.testimonial__slider {
+    height: 200px; /* set height because all content inside is position absolute */
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    overflow: hidden; /* hide slide items outside box */
+}
+
+.testimonial__sliderTrack {
+    position: relative;
+    height: 100%;
+    transition: transform 450ms ease-in-out;
+}
+
 .testimonial__slide {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
     text-align: center;
 }
 
@@ -32,6 +55,8 @@
     background: #D3D3D3;
     padding: 10px;
     border-radius: 50%;
+    transition: padding 250ms ease-in-out,
+                color 250ms ease-in-out;
 }
 
 .testimonial__indicator.active {
