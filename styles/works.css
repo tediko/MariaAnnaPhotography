@@ -9,7 +9,7 @@
 .works__gallery {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(10, 5vw); /* rows is tied to the viewport width, so that the cells maintain its aspect ratio perfectly fine. */
+    grid-template-rows: repeat(9, 5vw); /* rows is tied to the viewport width, so that the cells maintain its aspect ratio perfectly fine. */
     gap: 25px;
 }
 
@@ -134,12 +134,15 @@
     border-color:transparent #fff #fff transparent;
 }
 
-/* Works media queries */
+.works__cta {
+    margin-top: 80px;
+}
 
+/* Works media queries */
 @media (max-width: 768px) {
     .works__gallery {
         grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-        grid-template-rows: repeat(auto-fill, minmax(186px, 1fr));
+        grid-template-rows: repeat(6, 230px);
     }
 
     .works__item--1,
