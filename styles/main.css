@@ -5,7 +5,7 @@
     --clr-white: #fff;
     --clr-red: #D07C7C;
     --clr-blush: #E6B5B5;
-    --clr-coral: #D07C7C;
+    --clr-coral: #C95555;
     --clr-gray-dark: #5A5957;
     --clr-gray: #696969;
     --clr-gray-light: #848282;
@@ -97,7 +97,7 @@ h2 {
     height: 3px;
     max-width: 62px;
     width: 100%;
-    background: var(--clr-coral);
+    background: var(--clr-red);
     margin: 23px 0 35px 0;
 }
 
@@ -112,4 +112,25 @@ h2 {
 
 .sep-white {
     background: var(--clr-white);
+}
+
+/* Cta styles */
+.cta {
+    padding: 17px 54px;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    color: var(--clr-white);
+    background: var(--clr-red);
+    transition: background 250ms ease-in-out,
+                border-radius 250ms ease-in-out;
+}
+
+.cta:hover {
+    background: var(--clr-coral);
+    border-radius: 3px;
+}
+
+.cta-small {
+    padding: 17px 26px;
 }
