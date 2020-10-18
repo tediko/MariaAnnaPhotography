@@ -9,6 +9,7 @@
     --clr-gray-dark: #5A5957;
     --clr-gray: #696969;
     --clr-gray-light: #848282;
+    --clr-silver: #A0A0A0;
     --clr-smoke: #EBEBEB;
 }
 
@@ -89,6 +90,10 @@ h2 {
 
 .text-gray {
     color: var(--clr-gray-light);
+}
+
+.text-silver {
+    color: var(--clr-silver);
 }
 
 /* Separator styles */
