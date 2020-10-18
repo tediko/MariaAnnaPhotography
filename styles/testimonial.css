@@ -9,7 +9,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 130px 25px 0 25px;
+    padding: 130px 25px 130px 25px;
+    text-align: center;
 }
 
 .testimonial__slider {
