@@ -1,1 +1,98 @@
 /* Video section */
+.video__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../assets/img/video-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 25px;
+    height: 500px;
+}
+
+.video__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.video__button:hover .video__play {
+    font-size: 2.5rem;
+}
+
+.video__button:hover .video__frame-top::before, 
+.video__button:hover .video__frame-top::after, 
+.video__button:hover .video__frame-bot::before, 
+.video__button:hover .video__frame-bot::after {
+    margin: -15px -35px;
+}
+
+.video__button:hover .video__text {
+    font-size: 1rem;
+}
+
+.video__play {
+    font-size: 2rem;
+    transition: font-size 250ms ease-in;
+}
+
+.video__text {
+    margin-top: 45px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    transition: font-size 250ms ease-in;
+}
+
+/* Video frames on corner */
+.video__frame-top,
+.video__frame-bot {
+    position: relative;
+}
+
+.video__frame-top::before,
+.video__frame-top::after,
+.video__frame-bot::before,
+.video__frame-bot::after {
+    position: absolute;
+    content: '';
+    width: 11px;
+    height: 11px;
+    background: transparent;
+    margin: -10px -30px;
+    transition: margin 250ms ease-in;
+}
+
+.video__frame-top::before { /* top left frame */
+    top: 0;
+    left: 0;
+    border-width:1px 0px 0px 1px;
+    border-style:solid solid solid solid;
+    border-color:#000 transparent transparent #000;
+}
+
+.video__frame-top::after { /* top right frame */
+    top: 0;
+    right: 0;
+    border-width:1px 1px 0px 0px;
+    border-style:solid solid solid solid;
+    border-color:#000 #000 transparent transparent;
+}
+
+.video__frame-bot::before { /* bottom left frame */
+    bottom: 0;
+    left: 0;
+    border-width:0px 0px 1px 1px;
+    border-style:solid solid solid solid;
+    border-color:transparent transparent #000 #000;
+}
+
+.video__frame-bot::after { /* bottom right frame */
+    bottom: 0;
+    right: 0;
+    border-width:0px 1px 1px 0px;
+    border-style:solid solid solid solid;
+    border-color:transparent #000 #000 transparent;
+}
+
