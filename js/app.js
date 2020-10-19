@@ -42,3 +42,20 @@ indicators.forEach((indicator, idx) => {
     })
 })
 
+/* VIDEO MODAL */
+const playButton = document.querySelector('.video__button');
+const modal = document.querySelector('.video__modal');
+const overlay = document.querySelector('.overlay');
+
+function openModal() {
+    modal.classList.add('active');
+    overlay.classList.add('active');
+}
+
+function closeModal() {
+    modal.classList.remove('active');
+    overlay.classList.remove('active');
+}
+
+playButton.addEventListener('click', openModal);
+overlay.addEventListener('click', closeModal);
