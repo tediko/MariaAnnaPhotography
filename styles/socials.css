@@ -8,6 +8,9 @@
 
 .socials__box {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
 }
 
 .socials__link {
@@ -43,8 +46,4 @@
     border: 1px solid var(--clr-blush);
     opacity: 0;
     transition: opacity 250ms ease-in;
-}
-
-.socials__link:not(:last-child) {
-    margin-right: 100px;
 }
