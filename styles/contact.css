@@ -1,4 +1,10 @@
 /* Contact section */
+.contact {
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%), url('../assets/img/contact-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;    
+}
+
 .contact__wrapper {
     display: flex;
     flex-direction: column;
