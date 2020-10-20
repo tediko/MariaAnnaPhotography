@@ -7,6 +7,10 @@
     padding: 100px 25px;
 }
 
+.contact__text {
+    text-align: center;
+}
+
 .contact__form {
     display: flex;
     flex-direction: column;
@@ -25,6 +29,10 @@
     resize: none;
 }
 
+.contact__input:focus {
+    border: 2px solid var(--clr-red);
+}
+
 .contact__input::placeholder {
     font-size: 0.8125rem;
     color: var(--clr-silver);
@@ -39,4 +47,15 @@
 
 .contact__sent .contact__text {
     margin-left: 30px;
+}
+
+/* Contact media queries */
+@media (max-width: 480px) {
+    .contact__sent {
+        flex-direction: column;
+    }
+
+    .contact__sent .contact__text {
+        margin: 0 0 10px 0;
+    }
 }
