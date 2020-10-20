@@ -1,1 +1,42 @@
 /* Contact section */
+.contact__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 25px;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 585px;
+    margin-top: 54px;
+}
+
+.contact__input {
+    width: 100%;
+    padding: 15px 0 15px 15px;
+    border: 1px solid var(--clr-red);
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    resize: none;
+}
+
+.contact__input::placeholder {
+    font-size: 0.8125rem;
+    color: var(--clr-silver);
+}
+
+.contact__sent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.contact__sent .contact__text {
+    margin-left: 30px;
+}
