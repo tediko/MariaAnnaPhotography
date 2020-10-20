@@ -1,1 +1,50 @@
 /* Socials section */
+.socials__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 130px 25px;
+}
+
+.socials__box {
+    display: flex;
+}
+
+.socials__link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    z-index: 3;
+    transition: background 250ms ease-in,
+                color 200ms ease-in; 
+}
+
+.socials__link:hover {
+    color: var(--clr-white);
+    background: var(--clr-blush);
+}
+
+.socials__link:hover::after {
+    opacity: 1;
+}
+
+.socials__link::after {
+    position: absolute;
+    content: '';
+    width: 63px;
+    height: 63px;
+    border-radius: 50%;
+    border: 1px solid var(--clr-blush);
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+}
+
+.socials__link:not(:last-child) {
+    margin-right: 100px;
+}
