@@ -142,7 +142,7 @@
 @media (max-width: 768px) {
     .works__gallery {
         grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-        grid-template-rows: repeat(6, 230px);
+        grid-template-rows: repeat(3, 230px);
     }
 
     .works__item--1,
@@ -153,5 +153,12 @@
     .works__item--6 {
         grid-column: auto;
         grid-row: auto;
+    }
+
+    .works__item--5 .works__frame-top::before,
+    .works__item--5 .works__frame-top::after,
+    .works__item--5 .works__frame-bot::before,
+    .works__item--5 .works__frame-bot::after {
+        margin: -20px -15px;
     }
 }
