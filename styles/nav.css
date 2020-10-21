@@ -36,6 +36,8 @@
 
 .nav__menu.open { /* Show menu on mobile */
     transform: translateY(0);
+    background: var(--clr-white);
+    padding: 20px 0;
     opacity: 1;
 }
 
@@ -143,12 +145,13 @@
         position: absolute;
         flex-direction: column;
         align-items: center;
+        background: rgba(255, 255, 255, 0.2);
         width: 100%;
-        top: 72px;
+        top: 57px;
         left: 0;
         transform: translateX(-500px);
+        border-bottom: 1px solid var(--clr-smoke);
         opacity: 0;
-        background: rgba(255, 255, 255, 0.2);
     }
 
     .nav__item:not(:last-child) {
