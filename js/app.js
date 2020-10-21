@@ -1,3 +1,19 @@
+/* STICKY NAV */
+const nav = document.querySelector('.nav__container');
+
+function navScroll(e) {
+    const scrollY = window.scrollY;
+    const navOffsetTop = nav.getBoundingClientRect().top;
+    if (navOffsetTop == 0) {
+        nav.classList.add('active');
+    } else {
+        nav.classList.remove('active');
+    }
+}
+
+document.addEventListener('scroll', navScroll);
+
+
 /* HAMBURGER MENU BUTTON */
 const menu = document.querySelector('.nav__menu');
 const menuBtn = document.querySelector('.nav__mobile-btn');

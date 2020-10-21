@@ -1,6 +1,18 @@
 /* Nav section */
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
 .nav__container {
     padding: 0 25px;
+    transition: padding 250ms ease-in;
+}
+
+.nav__container.active {
+    padding: 0;
+    background: var(--clr-white);
 }
 
 .nav__wrapper {
