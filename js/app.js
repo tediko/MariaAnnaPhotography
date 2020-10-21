@@ -23,8 +23,10 @@ menuBtn.addEventListener('click', () => {
     if(!isMenuOpen) {
         menu.classList.add('open');
         menuBtn.classList.add('open');
+        menu.classList.remove('close');
         isMenuOpen = true;
     } else {
+        menu.classList.add('close');
         menu.classList.remove('open');
         menuBtn.classList.remove('open');
         isMenuOpen = false;

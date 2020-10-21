@@ -30,15 +30,44 @@
 
 .nav__menu {
     display: flex;
-    transition: transform 250ms ease-in,
-                opacity 250ms ease-in;
 }
 
 .nav__menu.open { /* Show menu on mobile */
-    transform: translateY(0);
+    display: flex;
+    transform: translateX(0);
     background: var(--clr-white);
     padding: 20px 0;
     opacity: 1;
+    animation-name: navSlideOpen;
+    animation-duration: 250ms;
+}
+
+.nav__menu.close { /* Closing animation on mobile */
+    padding: 20px 0;
+    animation-name: navSlideClose;
+    animation-duration: 250ms;
+}
+
+@keyframes navSlideOpen { /* Open animation */
+    0% {
+    opacity: 0;
+    transform: translateX(-500px);
+    }
+    100% {
+    opacity: 1;
+    transform: translateX(0);
+    }
+  }
+
+@keyframes navSlideClose { /* Close animation */
+    0% {
+    opacity: 1;
+    transform: translateX(0);
+    }
+    100% {
+    opacity: 0;
+    transform: translateX(500px);
+    }
 }
 
 .nav__item {
