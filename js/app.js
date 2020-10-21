@@ -77,3 +77,40 @@ function closeModal() {
 
 playButton.addEventListener('click', openModal);
 overlay.addEventListener('click', closeModal);
+
+/* MENU SCROLLSPY */
+document.addEventListener('DOMContentLoaded', function() {
+    const spySections = document.querySelectorAll('[data-scroll]');
+    const spyLinks = document.querySelectorAll('.nav__link');
+
+    const makeActive = link => {
+        spyLinks[link].classList.add('active');
+    }
+
+    const removeActive = link => {
+        spyLinks[link].classList.remove('active');
+    }
+
+    const removeAllActive = () => {
+        [...Array(spySections.length).keys()].forEach(link => removeActive(link));
+    }
+
+    const sectionMargin = 200;
+    let currentActive = 0;
+
+    window.addEventListener('scroll', () => {
+        const current = spySections.length - [...spySections]
+        .reverse()
+        .findIndex(section => {
+           return window.scrollY >= section.offsetTop - sectionMargin
+        }) - 1;
+
+        if (current !== currentActive) {
+            removeAllActive();
+            currentActive = current;
+            makeActive(current);
+        }
+
+        console.log(current);
+    })
+}, false)
