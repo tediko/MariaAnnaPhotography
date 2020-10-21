@@ -12,6 +12,7 @@
     width: 100%;
     max-width: 500px;
     margin-top: 40px;
+    z-index: 1;
 }
 
 .socials__link {
