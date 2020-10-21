@@ -101,14 +101,31 @@
     position: fixed;
     top: 50%;
     left: 50%;
+    max-width: 800px;
+    width: 100%;
     transform: translate(-50%, -50%) scale(0);
-    z-index: 1;
     transition: transform 250ms ease-in-out;
+    z-index: 5;
 }
 
 .video__modal.active {
     transform: translate(-50%, -50%) scale(1);
 }
 
+.video__iframe {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9*/
+    border: 5px solid transparent; /* iframe padding on mobile devices */
+}
+
+.video__iframe iframe {
+    position: absolute;
+    border: 0;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
 
 
