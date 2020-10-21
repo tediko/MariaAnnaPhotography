@@ -151,6 +151,7 @@ h2 {
     pointer-events: none;
     opacity: 0;
     transition: opacity 250ms ease-in;
+    z-index: 4;
 }
 
 .overlay.active {
