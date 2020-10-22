@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
         [...Array(spySections.length).keys()].forEach(link => removeActive(link));
     }
 
-    const sectionMargin = 200;
+    const sectionMargin = 0;
     let currentActive = 0;
 
     window.addEventListener('scroll', () => {
@@ -110,7 +110,5 @@ document.addEventListener('DOMContentLoaded', function() {
             currentActive = current;
             makeActive(current);
         }
-
-        console.log(current);
     })
 }, false)
