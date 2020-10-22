@@ -105,6 +105,11 @@
     transform: translateY(-10px);
 }
 
+.active.nav__link::before {
+    width: 100%;
+    transform: translateY(-10px);
+}
+
 /* Hamburger menu button*/
 .nav__mobile-btn { /* button container */
     position: relative;
